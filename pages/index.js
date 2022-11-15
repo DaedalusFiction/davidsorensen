@@ -5,10 +5,11 @@ import Hero from "../components/home/Hero";
 
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
-import { homePage } from "../siteInfo";
+import { homePage, portfolioProjects } from "../siteInfo";
 import ContactPreview from "../components/contact/ContactPreview";
 import NativeImage from "../components/general/NativeImage";
 import BlockQuote from "../components/general/BlockQuote";
+import ProjectPreview from "../components/home/ProjectPreview";
 
 export default function Home() {
     return (
@@ -23,9 +24,13 @@ export default function Home() {
                                 display: "flex",
                                 height: "100%",
                                 justifyContent: "center",
+                                filter: "grayscale(100)",
                             }}
                         >
-                            <NativeImage image={homePage.image} maxSize="500" />
+                            <NativeImage
+                                image={homePage.image}
+                                maxSize="1500"
+                            />
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={7}>
@@ -34,28 +39,88 @@ export default function Home() {
                                 display: "flex",
                                 height: "100%",
                                 alignItems: "center",
+                                justifyContent: "center",
                             }}
                         >
-                            <Box>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    gap: "1rem",
+                                    maxWidth: "75ch",
+                                }}
+                            >
                                 <Typography
                                     variant="h2"
                                     sx={{ textAlign: "center" }}
                                 >
-                                    Let&rsquo;s Work Together on This!
+                                    This is my life now
                                 </Typography>
-                                <br />
-                                <Typography sx={{ maxWidth: "55ch" }}>
-                                    My name is Charlene Morris and I am a
-                                    Licensed Insurance Broker. I have been
-                                    visiting homes and helping people navigate
-                                    the field of Medicare and Medicaid options
-                                    since 2006. I always explain details
-                                    thoroughly and I work hard to effectively
-                                    and professionally address consumers&rsquo;
-                                    concerns. I am proud of my exceptional
-                                    interpersonal skills and my ability to
-                                    quickly handle challenges.
+                                <Divider
+                                    sx={{
+                                        background:
+                                            theme.palette.custom.darkMuted,
+                                        margin: "1rem",
+                                    }}
+                                />
+
+                                <Typography>
+                                    Growing up, I was always interested in one
+                                    thing: Literature. From a very young age, I
+                                    carried books around with me everywhere I
+                                    went. As a teenager it was in the worlds of
+                                    H.G. Welles, Jules Verne, George Orwell, and
+                                    J.R.R. Tolkein that I found comfort, escape,
+                                    and deeper meaning.
                                 </Typography>
+                                <Typography>
+                                    In college I decided that I wanted to
+                                    continue along this path. I pursued a degree
+                                    in Liberal Arts (EMU didn&rsquo;t offer a
+                                    writing program) and became the News Editor
+                                    of the school&rsquo;s newspaper, which I
+                                    found to be extremely rewarding.
+                                </Typography>
+                                <Typography>
+                                    After I graduated, I took a number of small
+                                    jobs here and there, from home renovation
+                                    and construction to retail and restaurants.
+                                    As a side gig I would provide developmental
+                                    and line edits for novelists. In 2021 I
+                                    decided to take it more seriously, and I
+                                    knew that in order to further my business, I
+                                    needed a great website.
+                                </Typography>
+                                <Typography>
+                                    But I wanted to be involved. I had some
+                                    experience working with Python and C#, and I
+                                    thought to myself, well, why don&rsquo;t I
+                                    just learn HTML and CSS and make one myself?
+                                </Typography>
+                                <Typography>
+                                    So that&rsquo;s what I did. I spent a few
+                                    months learning the basics, to the point
+                                    that I could make a simple site myself, and
+                                    I absolutely fell in love with it. I found
+                                    that it was at once a whole new world, but
+                                    also incredibly familiar. All of my
+                                    experience in language and writing came
+                                    together in a way that I could have never
+                                    predicted. By the end of it I had a decent
+                                    portfolio and no interest in editing novels
+                                    ever again. I had finally found what the
+                                    thing that I had always wanted to do.
+                                </Typography>
+                                <Typography>
+                                    It was <strong>web development.</strong>
+                                </Typography>
+                                <Divider
+                                    sx={{
+                                        background:
+                                            theme.palette.custom.darkMuted,
+                                        margin: "1rem",
+                                    }}
+                                />
                             </Box>
                         </Box>
                     </Grid>
@@ -79,105 +144,72 @@ export default function Home() {
                             marginBottom: "4rem",
                         }}
                     >
-                        Insurance Plans
+                        Portfolio
                     </Typography>
-                    <Grid container spacing={4}>
-                        <Grid item xs={12} md={3}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-                                <NativeImage
-                                    image={homePage.image2}
-                                    maxSize="200"
-                                />
-                                <Typography
-                                    variant="h4"
-                                    sx={{
-                                        color: "white",
-                                        marginTop: ".5em",
-                                        textAlign: "center",
-                                    }}
-                                >
-                                    Medicare Advantage
-                                </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-                                <NativeImage
-                                    image={homePage.image3}
-                                    maxSize="200"
-                                />
-                                <Typography
-                                    variant="h4"
-                                    sx={{
-                                        color: "white",
-                                        marginTop: ".5em",
-                                        textAlign: "center",
-                                    }}
-                                >
-                                    Dental and Vision
-                                </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-                                <NativeImage
-                                    image={homePage.image4}
-                                    maxSize="200"
-                                />
-                                <Typography
-                                    variant="h4"
-                                    sx={{
-                                        color: "white",
-                                        marginTop: ".5em",
-                                        textAlign: "center",
-                                    }}
-                                >
-                                    Supplemental
-                                </Typography>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={3}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    alignItems: "center",
-                                    flexDirection: "column",
-                                }}
-                            >
-                                <NativeImage
-                                    image={homePage.image5}
-                                    maxSize="200"
-                                />
-                                <Typography
-                                    variant="h4"
-                                    sx={{
-                                        color: "white",
-                                        marginTop: ".5em",
-                                        textAlign: "center",
-                                    }}
-                                >
-                                    Prescription Drug
-                                </Typography>
-                            </Box>
-                        </Grid>
+                    <Grid container spacing={0}>
+                        {portfolioProjects.map((project, index) => {
+                            return (
+                                <>
+                                    <Grid key={index} item xs={12} md={3.8}>
+                                        <Box
+                                            sx={{
+                                                display: "flex",
+                                                flexDirection: "column",
+                                                justifyContent: "space-between",
+                                                height: "100%",
+                                                padding: "1rem 0",
+                                                borderTop:
+                                                    "1px solid " +
+                                                    theme.palette.custom
+                                                        .lightMuted,
+                                                borderBottom:
+                                                    index < 3
+                                                        ? "none"
+                                                        : "1px solid " +
+                                                          theme.palette.custom
+                                                              .lightMuted,
+                                            }}
+                                        >
+                                            <ProjectPreview
+                                                project={project}
+                                                index={index}
+                                                length={
+                                                    portfolioProjects.length
+                                                }
+                                            />
+                                        </Box>
+                                    </Grid>
+                                    {index / 2 !== 1 && (
+                                        <Grid item xs={0} md={0.3}>
+                                            <Box
+                                                sx={{
+                                                    display: "flex",
+                                                    height: "100%",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <Box
+                                                    sx={{
+                                                        height: "calc(100% - 2.25rem)",
+                                                    }}
+                                                >
+                                                    <Divider
+                                                        orientation="vertical"
+                                                        sx={{
+                                                            background:
+                                                                theme.palette
+                                                                    .custom
+                                                                    .lightMuted,
+                                                        }}
+                                                    />
+                                                </Box>
+                                            </Box>
+                                        </Grid>
+                                    )}
+                                </>
+                            );
+                        })}
                     </Grid>
                 </Container>
             </Box>
@@ -311,7 +343,6 @@ export default function Home() {
                 thoughtful! I feel truly blessed to have Charlene not only as my
                 agent but as my friend.
             </BlockQuote>
-            <ContactPreview />
         </Container>
     );
 }

@@ -4,12 +4,12 @@ let theme = createTheme({
     palette: {
         mode: "light",
         primary: {
-            main: "#d739a4",
+            main: "#A52422",
             off: "#FBFFF1",
         },
         secondary: {
             // main: "#CBEAA6",
-            main: "#62ffcb",
+            main: "#FFC482",
             // main: "#04A777",
             // main: "#DC965A",
         },
@@ -36,7 +36,7 @@ let theme = createTheme({
     },
     font: {
         primary: "Raleway",
-        accent: "EB Garamond",
+        accent: "Monument",
     },
 });
 
@@ -52,45 +52,42 @@ theme = createTheme(theme, {
     },
     typography: {
         h1: {
-            // fontFamily: "Raleway",
             fontFamily: theme.font.accent,
             color: theme.palette.custom.dark,
             // color: theme.palette.primary.off,
-            fontWeight: "600",
+            // fontWeight: "900",
             lineHeight: "1em",
-            fontSize: "clamp(3.5rem, 6vw, 7rem)",
+            fontSize: "clamp(2.5rem, 6vw, 7rem)",
             letterSpacing: ".025em",
+            textTransform: "uppercase",
         },
         h2: {
             color: theme.palette.custom.dark,
             fontFamily: theme.font.accent,
             fontWeight: "600",
-            // color: darkTheme.palette.custom.dark,
-            fontSize: "clamp(3rem, 4vw, 7rem)",
+            fontSize: "clamp(2rem, 2.5vw, 7rem)",
             letterSpacing: ".025em",
+            textTransform: "uppercase",
         },
         h3: {
             color: theme.palette.custom.dark,
             fontFamily: theme.font.accent,
             letterSpacing: ".025em",
+            fontSize: "2rem",
             fontWeight: "400",
-            // color: darkTheme.palette.custom.dark,
+            textTransform: "uppercase",
         },
         h4: {
             color: theme.palette.custom.dark,
-            fontFamily: theme.font.primary,
-            // letterSpacing: ".025em",
-            fontSize: "1.75rem",
-            fontWeight: "600",
-            // marginBottom: ".5em",
-            // color: darkTheme.palette.custom.dark,
+            fontFamily: theme.font.accent,
+            textTransform: "uppercase",
+            fontSize: "1rem",
+            fontWeight: "400",
         },
         h5: {
-            // color: theme.palette.custom.primary,
             fontFamily: theme.font.primary,
             fontSize: "1.25rem",
             fontWeight: "400",
-            // color: darkTheme.palette.custom.dark,
         },
         h6: {
             fontWeight: "650",
@@ -111,19 +108,15 @@ theme = createTheme(theme, {
         },
         body1: {
             fontFamily: theme.font.primary,
-            fontWeight: "475",
-            fontSize: "1.35rem",
+            fontWeight: "400",
+            fontSize: "1rem",
             lineHeight: "1.5em",
-            // color: theme.palette.custom.darkMuted,
-            // fontFamily: darkTheme.typography.darkTheme.main,
         },
         body2: {
             fontFamily: theme.font.primary,
-            // fontWeight: "400",
             fontSize: "1.25rem",
             lineHeight: "1.5rem",
             color: theme.palette.custom.dark,
-            // fontFamily: darkTheme.typography.darkTheme.decorative,
         },
         caption: {
             color: theme.palette.custom.dark,

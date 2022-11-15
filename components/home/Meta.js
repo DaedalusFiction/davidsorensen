@@ -13,11 +13,7 @@ const Meta = () => {
                 ) : (
                     <title>{`${basePath.toUpperCase()} - ${siteName}`}</title>
                 )}
-                <meta
-                    name="keywords"
-                    content="literature, literary, stories, story, poetry, poems, poem, magazine, fiction, non-fiction, journal"
-                />
-                <meta name="description" content="Literary Magazine"></meta>
+
                 <link
                     rel="preload"
                     href="/fonts/EBGaramond-VariableFont_wght.ttf"
@@ -31,6 +27,81 @@ const Meta = () => {
                     as="font"
                     type="font/ttf"
                     crossOrigin="anonymous"
+                ></link>
+                <meta
+                    data-n-head="ssr"
+                    data-hid="description"
+                    name="description"
+                    content="Portfolio for web developer David Sorensen"
+                />
+                <meta
+                    data-n-head="ssr"
+                    name="twitter:card"
+                    content="Portfolio for web developer David Sorensen"
+                />
+                <meta
+                    data-n-head="ssr"
+                    name="twitter:title"
+                    content="David J Sorensen"
+                />
+                <meta
+                    data-n-head="ssr"
+                    name="twitter:description"
+                    content="Portfolio for web developer David Sorensen"
+                />
+                <meta
+                    data-n-head="ssr"
+                    name="twitter:creator"
+                    content="David Sorensen"
+                />
+
+                <meta
+                    data-n-head="ssr"
+                    name="og:title"
+                    content="David J Sorensen"
+                />
+                <meta data-n-head="ssr" name="og:type" content="website" />
+                <meta
+                    data-n-head="ssr"
+                    name="og:url"
+                    content="https://davidjsorensen.com"
+                />
+
+                <meta
+                    data-n-head="ssr"
+                    name="og:description"
+                    content="Portfolio for web developer David Sorensen"
+                />
+                <meta
+                    data-n-head="ssr"
+                    name="og:site_name"
+                    content="David J Sorensen"
+                />
+                <link
+                    data-n-head="ssr"
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/images/favicons/apple-touch-icon.png"
+                />
+                <link
+                    data-n-head="ssr"
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="/images/favicons/favicon-32x32.png"
+                />
+                <link
+                    data-n-head="ssr"
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="/images/favicons/favicon-16x16.png"
+                />
+                <link
+                    data-n-head="ssr"
+                    rel="icon"
+                    type="image/x-icon"
+                    href="/images/favicons/favicon.ico"
                 ></link>
             </Head>
         </div>
