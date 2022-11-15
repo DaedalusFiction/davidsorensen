@@ -47,7 +47,6 @@ const Hero = () => {
                                         textAlign: "center",
                                         marginBottom: ".25em",
                                         textTransform: "uppercase",
-                                        lineHeight: ".9em",
                                         letterSpacing: ".1em",
                                     }}
                                 >

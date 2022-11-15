@@ -20,10 +20,12 @@ const homePage = {
     image4: { url: "/images/healthcare.png", alt: "nautilus shell design" },
     image5: { url: "/images/drugs.png", alt: "nautilus shell design" },
     quote1: {
-        attribution: "George",
+        attribution: "Charlene",
+        number: "1",
     },
     quote2: {
         attribution: "Diane",
+        number: "2",
     },
 };
 

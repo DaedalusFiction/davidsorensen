@@ -1,17 +1,24 @@
-import { ArrowRightAlt } from "@mui/icons-material";
-import { Button, Typography } from "@mui/material";
+import { ArrowRightAlt, MenuIcon } from "@mui/icons-material";
+import { Button, IconButton, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { useEffect } from "react";
 import theme from "../../styles/themes/theme";
 import ExpandingText from "../general/ExpandingText";
+import NavMenu from "./NavMenu";
 
 const Header = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const router = useRouter();
+    const pathName = router.pathname;
     const handleScroll = () => {
         const position = window.pageYOffset;
         setScrollPosition(position);
+    };
+    const toggleExpand = () => {
+        console.log("Expanded");
     };
 
     useEffect(() => {
@@ -51,24 +58,60 @@ const Header = () => {
                         flexWrap: "wrap",
                     }}
                 >
-                    <ExpandingText>
+                    <Box sx={{ cursor: "pointer" }}>
+                        <ExpandingText>
+                            <Link href="/">
+                                <Typography
+                                    variant="h4"
+                                    component="p"
+                                    sx={{
+                                        color: theme.palette.custom.lightMuted,
+                                        transition: "300ms",
+                                        transitionProperty: "ease-in-out",
+                                    }}
+                                >
+                                    David J Sorensen
+                                </Typography>
+                            </Link>
+                        </ExpandingText>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: { xs: "none", md: "flex" },
+                            gap: "1rem",
+                            alignItems: "center",
+                        }}
+                    >
                         <Typography
-                            variant="h4"
-                            component="p"
                             sx={{
-                                color: theme.palette.custom.lightMuted,
-                                transition: "300ms",
-                                transitionProperty: "ease-in-out",
+                                color:
+                                    pathName === "/resume"
+                                        ? theme.palette.custom.light
+                                        : theme.palette.custom.lightMuted,
                             }}
                         >
-                            David J Sorensen
+                            <Link href="/resume">Resume</Link>
                         </Typography>
-                    </ExpandingText>
-                    <Link href="#contact">
-                        <Button variant="outlined" color="secondary">
-                            Contact
-                        </Button>
-                    </Link>
+                        <Typography
+                            // variant="h6"
+                            sx={{
+                                color:
+                                    pathName === "/projects"
+                                        ? theme.palette.custom.light
+                                        : theme.palette.custom.lightMuted,
+                            }}
+                        >
+                            <Link href="/projects">Projects</Link>
+                        </Typography>
+                        <Link href="#contact">
+                            <Button variant="outlined" color="secondary">
+                                Contact
+                            </Button>
+                        </Link>
+                    </Box>
+                    <Box sx={{ display: { xs: "flex", md: "none" } }}>
+                        <NavMenu />
+                    </Box>
                 </Box>
             </Container>
         </Box>

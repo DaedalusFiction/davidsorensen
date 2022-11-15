@@ -1,8 +1,8 @@
-import { ArrowLeft, ArrowRightAlt } from "@mui/icons-material";
-import { Button, Divider, Typography } from "@mui/material";
+import { ArrowRightAlt } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Link from "next/link";
 import theme from "../../styles/themes/theme";
+import ExpandingText from "../general/ExpandingText";
 import SizedImage from "../general/SizedImage";
 
 const ProjectPreview = ({ children, project, index, length }) => {
@@ -80,17 +80,19 @@ const ProjectPreview = ({ children, project, index, length }) => {
                     sx={{
                         display: "flex",
                         marginTop: "2em",
+                        justifyContent: "end",
                     }}
                 >
-                    <Typography
-                        sx={{
-                            "&:hover": { textDecoration: "underline" },
-                            color: theme.palette.custom.light,
-                            fontWeight: "bold",
-                        }}
-                    >
-                        Visit Website
-                    </Typography>
+                    <ExpandingText>
+                        <Typography
+                            sx={{
+                                color: theme.palette.custom.light,
+                                fontWeight: "bold",
+                            }}
+                        >
+                            Visit Website
+                        </Typography>
+                    </ExpandingText>
                     <ArrowRightAlt sx={{ color: theme.palette.custom.light }} />
                 </Box>
             </a>

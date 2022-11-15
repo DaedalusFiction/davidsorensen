@@ -6,10 +6,12 @@ import Hero from "../components/home/Hero";
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
 import { homePage, portfolioProjects } from "../siteInfo";
-import ContactPreview from "../components/contact/ContactPreview";
 import NativeImage from "../components/general/NativeImage";
 import BlockQuote from "../components/general/BlockQuote";
 import ProjectPreview from "../components/home/ProjectPreview";
+import ExpandingText from "../components/general/ExpandingText";
+import SocialMediaIcons from "../components/general/SocialMediaIcons";
+import { MailOutline, OpenInNew } from "@mui/icons-material";
 
 export default function Home() {
     return (
@@ -17,20 +19,30 @@ export default function Home() {
             <Meta />
             <Hero />
             <Container maxWidth="xl">
-                <Grid container spacing={4} sx={{ padding: "8rem 0" }}>
+                <Grid className="section" container spacing={4}>
                     <Grid item xs={12} md={5}>
-                        <Box
-                            sx={{
-                                display: "flex",
-                                height: "100%",
-                                justifyContent: "center",
-                                filter: "grayscale(100)",
-                            }}
-                        >
-                            <NativeImage
-                                image={homePage.image}
-                                maxSize="1500"
-                            />
+                        <Box sx={{ display: "flex" }}>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    height: "100%",
+                                    justifyContent: "center",
+                                    filter: "grayscale(100)",
+                                }}
+                            >
+                                <NativeImage
+                                    image={homePage.image}
+                                    maxSize="1500"
+                                />
+                            </Box>
+                            <Typography
+                                sx={{
+                                    writingMode: "vertical-rl",
+                                    marginLeft: ".25em",
+                                }}
+                            >
+                                / Shelburne Falls, MA /
+                            </Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={7}>
@@ -215,17 +227,17 @@ export default function Home() {
             </Box>
 
             <BlockQuote quote={homePage.quote1}>
-                We have been working with Charlene for a number of years. When
-                we began I was reluctant to change insurance carriers, but she
-                was persistent [...] We continue to receive requests from other
-                insurance carriers but find her company and service to be the
-                best [...] If she wants to give my name to anyone who wants
-                super service, please tell them to call me.
+                I contacted Mr. Sorensen to create my website page. He was very
+                helpful to work with, and he created a beautiful website for my
+                business that is easy for customers to navigate and straight to
+                the point. The background color brings out my picture. He was
+                extremely professional, quick, communicative, and an absolute
+                pleasure to work with.
             </BlockQuote>
 
             <Box
+                className="section"
                 sx={{
-                    padding: "8rem 0",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundImage:
@@ -233,6 +245,14 @@ export default function Home() {
                 }}
             >
                 <Container maxWidth="lg">
+                    <Typography
+                        sx={{
+                            color: theme.palette.custom.lightMuted,
+                            marginBottom: ".25em",
+                        }}
+                    >
+                        / attributes /
+                    </Typography>
                     <Grid container spacing={6}>
                         <Grid item xs={12} md={4}>
                             <Box
@@ -245,7 +265,7 @@ export default function Home() {
                                     variant="h2"
                                     sx={{ textAlign: "center", color: "white" }}
                                 >
-                                    Our Promise
+                                    Self-Teaching
                                 </Typography>
                                 <Divider
                                     sx={{
@@ -260,9 +280,11 @@ export default function Home() {
                                         color: theme.palette.custom.lightMuted,
                                     }}
                                 >
-                                    We promise to do our best to make sure you
-                                    won&rsquo;t stress over finding affordable
-                                    health insurance while on Medicare.
+                                    There are a million technologies out there,
+                                    and dozens of new ones being released
+                                    weekly. Being able to teach myself means
+                                    that whatever the challenge is, I can
+                                    overcome it myself.
                                 </Typography>
                             </Box>
                         </Grid>
@@ -277,7 +299,7 @@ export default function Home() {
                                     variant="h2"
                                     sx={{ textAlign: "center", color: "white" }}
                                 >
-                                    Our Mission
+                                    Detail-Oriented
                                 </Typography>
                                 <Divider
                                     sx={{
@@ -292,9 +314,11 @@ export default function Home() {
                                         color: theme.palette.custom.lightMuted,
                                     }}
                                 >
-                                    We are committed to working with you to find
-                                    the insurance plan that fits your needs, and
-                                    we&rsquo;ll do it at no cost to you.
+                                    One thing that editing has taught me is that
+                                    everything needs way more polish than you
+                                    think it does. When I finish something and
+                                    I&rsquo;m satisfied with it, I go back and
+                                    look at it again.
                                 </Typography>
                             </Box>
                         </Grid>
@@ -309,7 +333,7 @@ export default function Home() {
                                     variant="h2"
                                     sx={{ textAlign: "center", color: "white" }}
                                 >
-                                    Your Journey
+                                    severely dedicated
                                 </Typography>
                                 <Divider
                                     sx={{
@@ -324,13 +348,24 @@ export default function Home() {
                                         color: theme.palette.custom.lightMuted,
                                     }}
                                 >
-                                    We are here to help you with any questions
-                                    or concerns you may have about your health
-                                    insurance coverage.
+                                    When I decide to take something on, I
+                                    don&rsquo;t hold anything back. I believe
+                                    that if something is worth doing, then
+                                    it&rsquo;s worth doing right, because at the
+                                    end of the day, I am what I create.
                                 </Typography>
                             </Box>
                         </Grid>
                     </Grid>
+                    <Typography
+                        sx={{
+                            color: theme.palette.custom.lightMuted,
+                            marginTop: ".25em",
+                            textAlign: "end",
+                        }}
+                    >
+                        / philosophy /
+                    </Typography>
                 </Container>
             </Box>
             <BlockQuote quote={homePage.quote2}>
@@ -343,6 +378,108 @@ export default function Home() {
                 thoughtful! I feel truly blessed to have Charlene not only as my
                 agent but as my friend.
             </BlockQuote>
+            <Box
+                className="section"
+                sx={{ background: theme.palette.primary.main }}
+            >
+                <Container>
+                    <Grid container spacing={4}>
+                        <Grid item xs={12} md={6}>
+                            <Box>
+                                <Typography
+                                    variant="h4"
+                                    sx={{ color: theme.palette.custom.light }}
+                                >
+                                    Need a website?
+                                </Typography>
+                                <Divider
+                                    sx={{
+                                        margin: "1rem 0",
+                                        background:
+                                            theme.palette.custom.lightMuted,
+                                    }}
+                                />
+
+                                <Box sx={{ display: "flex", gap: "1rem" }}>
+                                    <OpenInNew
+                                        sx={{
+                                            color: theme.palette.custom.light,
+                                        }}
+                                    />
+                                    <ExpandingText>
+                                        <a
+                                            style={{
+                                                color: theme.palette.custom
+                                                    .light,
+                                            }}
+                                            href="https://fictionalweb.com"
+                                        >
+                                            fictionalweb.com
+                                        </a>
+                                    </ExpandingText>
+                                </Box>
+
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        gap: "1rem",
+                                        marginTop: ".5rem",
+                                    }}
+                                >
+                                    <MailOutline
+                                        sx={{
+                                            color: theme.palette.custom.light,
+                                        }}
+                                    />
+
+                                    <ExpandingText>
+                                        <a
+                                            style={{
+                                                color: theme.palette.custom
+                                                    .light,
+                                            }}
+                                            href="mailto:hello@fictionalweb.com"
+                                        >
+                                            hello@fictionalweb.com
+                                        </a>
+                                    </ExpandingText>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "end",
+                                }}
+                            >
+                                <Typography
+                                    variant="h4"
+                                    sx={{
+                                        color: theme.palette.custom.light,
+                                        textAlign: "end",
+                                    }}
+                                >
+                                    Want to see more?
+                                </Typography>
+                                <Divider
+                                    sx={{
+                                        margin: "1rem 0",
+                                        width: "100%",
+                                        background:
+                                            theme.palette.custom.lightMuted,
+                                    }}
+                                />
+
+                                <SocialMediaIcons
+                                    color={theme.palette.custom.light}
+                                />
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Box>
         </Container>
     );
 }
