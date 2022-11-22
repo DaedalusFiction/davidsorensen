@@ -1,6 +1,7 @@
 import { ArrowRightAlt } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import Link from "next/link";
 import theme from "../../styles/themes/theme";
 import ExpandingText from "../general/ExpandingText";
 import SizedImage from "../general/SizedImage";
@@ -75,27 +76,31 @@ const ProjectPreview = ({ children, project, index, length }) => {
                     {project.description}
                 </Typography>
             </Box>
-            <a href={project.url} target="_blank" rel="noreferrer">
-                <Box
-                    sx={{
-                        display: "flex",
-                        marginTop: "2em",
-                        justifyContent: "end",
-                    }}
-                >
-                    <ExpandingText>
-                        <Typography
-                            sx={{
-                                color: theme.palette.custom.light,
-                                fontWeight: "bold",
-                            }}
-                        >
-                            Visit Website
-                        </Typography>
-                    </ExpandingText>
-                    <ArrowRightAlt sx={{ color: theme.palette.custom.light }} />
-                </Box>
-            </a>
+            <Box sx={{ cursor: "pointer" }}>
+                <Link href={`/portfolio/${project.name}`}>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            marginTop: "2em",
+                            justifyContent: "end",
+                        }}
+                    >
+                        <ExpandingText>
+                            <Typography
+                                sx={{
+                                    color: theme.palette.custom.light,
+                                    fontWeight: "bold",
+                                }}
+                            >
+                                View Study
+                            </Typography>
+                        </ExpandingText>
+                        <ArrowRightAlt
+                            sx={{ color: theme.palette.custom.light }}
+                        />
+                    </Box>
+                </Link>
+            </Box>
         </Box>
     );
 };

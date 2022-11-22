@@ -5,13 +5,19 @@ import Hero from "../components/home/Hero";
 
 import Meta from "../components/home/Meta";
 import theme from "../styles/themes/theme";
-import { homePage, portfolioProjects } from "../siteInfo";
+import { homePage, personalItems, portfolioProjects } from "../siteInfo";
 import NativeImage from "../components/general/NativeImage";
 import BlockQuote from "../components/general/BlockQuote";
 import ProjectPreview from "../components/home/ProjectPreview";
 import ExpandingText from "../components/general/ExpandingText";
 import SocialMediaIcons from "../components/general/SocialMediaIcons";
-import { MailOutline, OpenInNew } from "@mui/icons-material";
+import {
+    MailOutline,
+    OpenInNew,
+    SubdirectoryArrowLeft,
+} from "@mui/icons-material";
+import SizedImage from "../components/general/SizedImage";
+import CornerBorders from "../components/general/CornerBorders";
 
 export default function Home() {
     return (
@@ -19,7 +25,7 @@ export default function Home() {
             <Meta />
             <Hero />
             <Container maxWidth="xl">
-                <Grid className="section" container spacing={4}>
+                <Grid className="section" id="showcase" container spacing={4}>
                     <Grid item xs={12} md={5}>
                         <Box sx={{ display: "flex" }}>
                             <Box
@@ -38,6 +44,7 @@ export default function Home() {
                             <Typography
                                 sx={{
                                     writingMode: "vertical-rl",
+                                    display: { xs: "none", md: "block" },
                                     marginLeft: ".25em",
                                 }}
                             >
@@ -368,118 +375,119 @@ export default function Home() {
                     </Typography>
                 </Container>
             </Box>
-            <BlockQuote quote={homePage.quote2}>
-                My late husband was referred to Charlene by a friend and after
-                meeting with her we went with [her] and have been so thankful.
-                Charlene&rsquo;s guidance directing us to the best policy for
-                our needs has been invaluable. Since my husband passed away,
-                Charlene has been there for me for the past eleven years. I will
-                get a phone call just to ask me how I&rsquo;m doing. So
-                thoughtful! I feel truly blessed to have Charlene not only as my
-                agent but as my friend.
-            </BlockQuote>
+
             <Box
                 className="section"
                 sx={{ background: theme.palette.primary.main }}
             >
                 <Container>
-                    <Grid container spacing={4}>
-                        <Grid item xs={12} md={6}>
-                            <Box>
-                                <Typography
-                                    variant="h4"
-                                    sx={{ color: theme.palette.custom.light }}
-                                >
-                                    Need a website?
-                                </Typography>
-                                <Divider
-                                    sx={{
-                                        margin: "1rem 0",
-                                        background:
-                                            theme.palette.custom.lightMuted,
-                                    }}
-                                />
+                    <Typography
+                        variant="h2"
+                        sx={{
+                            textAlign: "end",
+                            color: theme.palette.custom.light,
+                            marginBottom: ".5em",
+                        }}
+                    >
+                        On a personal note...
+                    </Typography>
+                    <Typography sx={{ color: theme.palette.custom.lightMuted }}>
+                        / creativity /
+                    </Typography>
 
-                                <Box sx={{ display: "flex", gap: "1rem" }}>
-                                    <OpenInNew
-                                        sx={{
-                                            color: theme.palette.custom.light,
-                                        }}
-                                    />
-                                    <ExpandingText>
-                                        <a
-                                            style={{
-                                                color: theme.palette.custom
-                                                    .light,
-                                            }}
-                                            href="https://fictionalweb.com"
-                                        >
-                                            fictionalweb.com
-                                        </a>
-                                    </ExpandingText>
-                                </Box>
-
-                                <Box
-                                    sx={{
-                                        display: "flex",
-                                        gap: "1rem",
-                                        marginTop: ".5rem",
-                                    }}
-                                >
-                                    <MailOutline
-                                        sx={{
-                                            color: theme.palette.custom.light,
-                                        }}
-                                    />
-
-                                    <ExpandingText>
-                                        <a
-                                            style={{
-                                                color: theme.palette.custom
-                                                    .light,
-                                            }}
-                                            href="mailto:hello@fictionalweb.com"
-                                        >
-                                            hello@fictionalweb.com
-                                        </a>
-                                    </ExpandingText>
-                                </Box>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "end",
-                                }}
-                            >
-                                <Typography
-                                    variant="h4"
-                                    sx={{
-                                        color: theme.palette.custom.light,
-                                        textAlign: "end",
-                                    }}
-                                >
-                                    Want to see more?
-                                </Typography>
-                                <Divider
-                                    sx={{
-                                        margin: "1rem 0",
-                                        width: "100%",
-                                        background:
-                                            theme.palette.custom.lightMuted,
-                                    }}
-                                />
-
-                                <SocialMediaIcons
-                                    color={theme.palette.custom.light}
-                                />
-                            </Box>
-                        </Grid>
+                    <Grid container>
+                        {personalItems.map((personalItem, index) => {
+                            return (
+                                <Grid item xs={12} md={6} key={index}>
+                                    <CornerBorders
+                                        color={theme.palette.custom.lightMuted}
+                                    >
+                                        <Grid container spacing={2}>
+                                            <Grid item xs={12} md={5}>
+                                                <Box
+                                                    sx={{
+                                                        height: "100%",
+                                                        width: "100%",
+                                                        filter: "grayscale(100)",
+                                                    }}
+                                                >
+                                                    <SizedImage
+                                                        height="10rem"
+                                                        width="100%"
+                                                        image={
+                                                            personalItem.image
+                                                        }
+                                                    />
+                                                </Box>
+                                            </Grid>
+                                            <Grid item xs={12} md={7}>
+                                                <Box>
+                                                    <Box
+                                                        sx={{
+                                                            display: "flex",
+                                                            gap: ".5rem",
+                                                        }}
+                                                    >
+                                                        <Typography
+                                                            variant="h4"
+                                                            sx={{
+                                                                color: theme
+                                                                    .palette
+                                                                    .custom
+                                                                    .light,
+                                                                marginBottom:
+                                                                    ".5em",
+                                                            }}
+                                                        >
+                                                            {personalItem.name}
+                                                        </Typography>
+                                                        <SubdirectoryArrowLeft
+                                                            sx={{
+                                                                color: theme
+                                                                    .palette
+                                                                    .custom
+                                                                    .light,
+                                                                transform:
+                                                                    "rotate(-90deg)",
+                                                            }}
+                                                        />
+                                                    </Box>
+                                                    <Typography
+                                                        sx={{
+                                                            color: theme.palette
+                                                                .custom
+                                                                .lightMuted,
+                                                        }}
+                                                    >
+                                                        {
+                                                            personalItem.description
+                                                        }
+                                                    </Typography>
+                                                </Box>
+                                            </Grid>
+                                        </Grid>
+                                    </CornerBorders>
+                                </Grid>
+                            );
+                        })}
                     </Grid>
+                    <Typography
+                        sx={{
+                            color: theme.palette.custom.lightMuted,
+                            textAlign: "end",
+                        }}
+                    >
+                        / community /
+                    </Typography>
                 </Container>
             </Box>
+
+            <BlockQuote quote={homePage.quote2}>
+                David was wonderful to work with. He listened to my needs and
+                created a website that is exactly what I wanted, down to the
+                last detail. I can&rsquo;t recommend him enough to anyone
+                looking for any kind of website at all!
+            </BlockQuote>
         </Container>
     );
 }

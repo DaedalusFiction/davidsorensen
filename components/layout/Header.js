@@ -13,12 +13,11 @@ const Header = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const router = useRouter();
     const pathName = router.pathname;
+    const baseHeaderColor =
+        pathName === "/" ? "transparent" : theme.palette.primary.main;
     const handleScroll = () => {
         const position = window.pageYOffset;
         setScrollPosition(position);
-    };
-    const toggleExpand = () => {
-        console.log("Expanded");
     };
 
     useEffect(() => {
@@ -46,7 +45,7 @@ const Header = () => {
                 backgroundColor:
                     scrollPosition > 50
                         ? theme.palette.primary.main
-                        : "transparent",
+                        : baseHeaderColor,
             }}
         >
             <Container maxWidth="xl">
@@ -84,10 +83,14 @@ const Header = () => {
                     >
                         <Typography
                             sx={{
+                                transition: "300ms",
                                 color:
                                     pathName === "/resume"
                                         ? theme.palette.custom.light
                                         : theme.palette.custom.lightMuted,
+                                "&:hover": {
+                                    color: theme.palette.custom.light,
+                                },
                             }}
                         >
                             <Link href="/resume">Resume</Link>
@@ -95,15 +98,19 @@ const Header = () => {
                         <Typography
                             // variant="h6"
                             sx={{
+                                transition: "300ms",
                                 color:
-                                    pathName === "/projects"
+                                    pathName === "/portfolio"
                                         ? theme.palette.custom.light
                                         : theme.palette.custom.lightMuted,
+                                "&:hover": {
+                                    color: theme.palette.custom.light,
+                                },
                             }}
                         >
-                            <Link href="/projects">Projects</Link>
+                            <Link href="/portfolio">Portfolio</Link>
                         </Typography>
-                        <Link href="#contact">
+                        <Link href="/contact">
                             <Button variant="outlined" color="secondary">
                                 Contact
                             </Button>

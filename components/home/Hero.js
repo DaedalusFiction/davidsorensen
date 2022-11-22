@@ -101,12 +101,20 @@ const Hero = () => {
                         </Grid>
                     </Grid>
                     <Box sx={{ display: "flex", justifyContent: "center" }}>
-                        <ArrowCircleDown
-                            style={{
-                                color: theme.palette.custom.lightMuted,
-                                fontSize: "4rem",
-                            }}
-                        />
+                        <a href="#showcase">
+                            <ArrowCircleDown
+                                sx={{
+                                    color: theme.palette.custom.lightMuted,
+                                    fontSize: "4rem",
+                                    borderRadius: "100%",
+                                    "&:hover": {
+                                        transition: "300ms",
+                                        color: theme.palette.secondary.main,
+                                        transform: "scale(1.05)",
+                                    },
+                                }}
+                            />
+                        </a>
                     </Box>
                 </Container>
             </Box>

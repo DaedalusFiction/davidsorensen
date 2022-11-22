@@ -5,17 +5,18 @@ import Header from "./Header";
 
 const PageLayout = ({ name, children }) => {
     return (
-        <>
-            {/* <Header /> */}
-            <Box sx={{ padding: "6rem 0" }}>
-                <Container maxWidth="xl">
-                    <Typography variant="h1" sx={{ textAlign: "center" }}>
-                        {name}
-                    </Typography>
-                    {children}
-                </Container>
-            </Box>
-        </>
+        <Box sx={{ padding: "8rem 0 6rem 0" }}>
+            <Container maxWidth="xl">
+                <Typography
+                    className="header-fade-in"
+                    variant="h1"
+                    sx={{ textAlign: "center" }}
+                >
+                    {name}
+                </Typography>
+                {children}
+            </Container>
+        </Box>
     );
 };
 

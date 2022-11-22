@@ -22,6 +22,21 @@ a {
     scroll-behavior: smooth;
 }
 
+.header-fade-in {
+    animation: textFadeIn 1000ms ease-in-out;
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0%;
+        letter-spacing: 0.25em;
+    }
+    100% {
+        opacity: 100%;
+        letter-spacing: 0.025em;
+    }
+}
+
 .color-accent {
     color: var(--color-accent);
 }

@@ -74,7 +74,7 @@ const BlockQuote = ({ children, quote }) => {
                     </Typography>
                 </Box>
                 <Typography sx={{ transform: "translateY(.5em)" }}>
-                    / 0{quote.number} - 03 /
+                    / 0{quote.number} - 02 /
                 </Typography>
             </Box>
         </Container>
