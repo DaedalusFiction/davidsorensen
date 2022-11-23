@@ -208,7 +208,13 @@ const Project = () => {
                                             cursor: "pointer",
                                         }}
                                     >
-                                        <a href={project.href}>Visit Website</a>
+                                        <a
+                                            href={project.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            Visit Website
+                                        </a>
                                     </Typography>
                                 </ExpandingText>
                             </Grid>
