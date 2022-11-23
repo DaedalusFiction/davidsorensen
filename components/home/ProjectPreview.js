@@ -6,7 +6,7 @@ import theme from "../../styles/themes/theme";
 import ExpandingText from "../general/ExpandingText";
 import SizedImage from "../general/SizedImage";
 
-const ProjectPreview = ({ children, project, index, length }) => {
+const ProjectPreview = ({ project, index, length, dark }) => {
     return (
         <Box
             sx={{
@@ -26,15 +26,25 @@ const ProjectPreview = ({ children, project, index, length }) => {
                     }}
                 >
                     <Typography
-                        sx={{ color: theme.palette.custom.lightMuted }}
+                        sx={{
+                            color: dark
+                                ? theme.palette.custom.darkMuted
+                                : theme.palette.custom.lightMuted,
+                        }}
                     >{`/0${index + 1} - 0${length}/`}</Typography>
-                    <Typography sx={{ color: theme.palette.custom.lightMuted }}>
+                    <Typography
+                        sx={{
+                            color: dark
+                                ? theme.palette.custom.darkMuted
+                                : theme.palette.custom.lightMuted,
+                        }}
+                    >
                         {project.year}
                     </Typography>
                 </Box>
                 <Box
                     sx={{
-                        filter: "grayscale(100)",
+                        filter: dark ? "none" : "grayscale(100)",
                         width: "100%",
                         transition: "300ms",
                     }}
@@ -58,8 +68,11 @@ const ProjectPreview = ({ children, project, index, length }) => {
                 </Box>
                 <Typography
                     variant="h3"
+                    component="h5"
                     sx={{
-                        color: "white",
+                        color: dark
+                            ? theme.palette.custom.dark
+                            : theme.palette.custom.light,
                         fontSize: "1.5rem",
                         marginTop: "1.5em",
                         textAlign: "center",
@@ -69,7 +82,9 @@ const ProjectPreview = ({ children, project, index, length }) => {
                 </Typography>
                 <Typography
                     sx={{
-                        color: theme.palette.custom.light,
+                        color: dark
+                            ? theme.palette.custom.dark
+                            : theme.palette.custom.light,
                         marginTop: ".5em",
                     }}
                 >
@@ -88,7 +103,9 @@ const ProjectPreview = ({ children, project, index, length }) => {
                         <ExpandingText>
                             <Typography
                                 sx={{
-                                    color: theme.palette.custom.light,
+                                    color: dark
+                                        ? theme.palette.custom.dark
+                                        : theme.palette.custom.light,
                                     fontWeight: "bold",
                                 }}
                             >
@@ -96,7 +113,11 @@ const ProjectPreview = ({ children, project, index, length }) => {
                             </Typography>
                         </ExpandingText>
                         <ArrowRightAlt
-                            sx={{ color: theme.palette.custom.light }}
+                            sx={{
+                                color: dark
+                                    ? theme.palette.custom.dark
+                                    : theme.palette.custom.light,
+                            }}
                         />
                     </Box>
                 </Link>

@@ -270,6 +270,7 @@ export default function Home() {
                             >
                                 <Typography
                                     variant="h2"
+                                    component="h5"
                                     sx={{ textAlign: "center", color: "white" }}
                                 >
                                     Self-Teaching
@@ -304,6 +305,7 @@ export default function Home() {
                             >
                                 <Typography
                                     variant="h2"
+                                    component="h5"
                                     sx={{ textAlign: "center", color: "white" }}
                                 >
                                     Detail-Oriented
@@ -338,6 +340,7 @@ export default function Home() {
                             >
                                 <Typography
                                     variant="h2"
+                                    component="h5"
                                     sx={{ textAlign: "center", color: "white" }}
                                 >
                                     severely dedicated
@@ -383,6 +386,7 @@ export default function Home() {
                 <Container>
                     <Typography
                         variant="h2"
+                        component="h6"
                         sx={{
                             textAlign: "end",
                             color: theme.palette.custom.light,
@@ -430,6 +434,7 @@ export default function Home() {
                                                     >
                                                         <Typography
                                                             variant="h4"
+                                                            component="p"
                                                             sx={{
                                                                 color: theme
                                                                     .palette
