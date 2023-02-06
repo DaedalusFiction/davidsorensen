@@ -24,7 +24,7 @@ const homePage = {
         number: "1",
     },
     quote2: {
-        attribution: "Ramona",
+        attribution: "Terry",
         number: "2",
     },
 };
