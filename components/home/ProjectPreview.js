@@ -68,7 +68,7 @@ const ProjectPreview = ({ project, index, length, dark }) => {
                 </Box>
                 <Typography
                     variant="h3"
-                    component="h5"
+                    component="h4"
                     sx={{
                         color: dark
                             ? theme.palette.custom.dark
