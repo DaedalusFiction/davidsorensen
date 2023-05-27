@@ -31,6 +31,23 @@ const homePage = {
 
 const portfolioProjects = [
     {
+        name: "Who Dat",
+        type: "Browser-based Game",
+        url: "https://whodat.ninja",
+        year: "2023",
+        technologies: ["Next.js", "MUI", "ChatGPT"],
+        image: {
+            url: "/images/whodat.webp",
+            alt: "screenshot of whodat.ninja",
+        },
+        challenge:
+            "For whodat.ninja I needed to find a way to find an efficient way for the user to chat with fictional characters, in such a way that I can easily update a list of curated characters.",
+        solution:
+            "I used the ChatGPT API to generate conversation, and handled the game logic in a way that seamlessly integrates with the conversation.",
+        description:
+            "Who Dat? is a browser-based game where you have a conversation with an unknown fictional character and must guess whom it is you're talking with.",
+    },
+    {
         name: "The Rumen",
         type: "Literary Journal",
         url: "https://therumen.com",
@@ -64,23 +81,23 @@ const portfolioProjects = [
         description:
             "Charlene is a local Insurance Agent who specializes in assisting elderly clients signing up for MediCare.",
     },
-    {
-        name: "Zuzu's Hot Five",
-        type: "Musician Portfolio",
-        url: "https://fictionalweb-zuzus.netlify.app",
-        year: "2022",
-        technologies: ["Next.js", "MUI", "Firebase"],
-        image: {
-            url: "/images/zuzusScreencap.webp",
-            alt: "screenshot of zuzushotfive.com",
-        },
-        challenge:
-            "Zuzu's had an existing site, but their design was a bit dated, and the mobile responsiveness wasn't working well. They also wanted a system for uploading information on their next shows that would require as little maintenance as possible",
-        solution:
-            "For Zuzu's a designed a website that captures the feel and spirit of their music. I also included an events page that would automatically filter past events into Archives based on the current date, and I created a secure admin panel that Zuzu could use to upload and edit these events herself.",
-        description:
-            "Zuzu's is a traditional jazz band in Charlottesville, Virginia. I had gone to many of their shows and danced to countless songs of theirs over the years, so when I found out that they needed a new website, I quickly offered my services.",
-    },
+    // {
+    //     name: "Zuzu's Hot Five",
+    //     type: "Musician Portfolio",
+    //     url: "https://fictionalweb-zuzus.netlify.app",
+    //     year: "2022",
+    //     technologies: ["Next.js", "MUI", "Firebase"],
+    //     image: {
+    //         url: "/images/zuzusScreencap.webp",
+    //         alt: "screenshot of zuzushotfive.com",
+    //     },
+    //     challenge:
+    //         "Zuzu's had an existing site, but their design was a bit dated, and the mobile responsiveness wasn't working well. They also wanted a system for uploading information on their next shows that would require as little maintenance as possible",
+    //     solution:
+    //         "For Zuzu's a designed a website that captures the feel and spirit of their music. I also included an events page that would automatically filter past events into Archives based on the current date, and I created a secure admin panel that Zuzu could use to upload and edit these events herself.",
+    //     description:
+    //         "Zuzu's is a traditional jazz band in Charlottesville, Virginia. I had gone to many of their shows and danced to countless songs of theirs over the years, so when I found out that they needed a new website, I quickly offered my services.",
+    // },
     {
         name: "Cosima Hewes",
         type: "Artist Portfolio",
