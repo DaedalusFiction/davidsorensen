@@ -31,6 +31,57 @@ const homePage = {
 
 const portfolioProjects = [
     {
+        name: "Angelo Jewelry",
+        type: "ECommerce site",
+        url: "https://commerce-template.netlify.app",
+        year: "2023",
+        technologies: ["Next.js", "MUI", "Shopify-buy"],
+        image: {
+            url: "/images/angeloScreencap.webp",
+            alt: "screenshot of angelo jewelry",
+        },
+        challenge:
+            "The owners of Angelo Jewelry came to me with an existing Shopify website that wasn't performing well and was difficult to organize. They wanted to start generating more online sales to grow their business.",
+        solution:
+            "I built a custom app and integrated it with their current Shopify using the Shopify-Buy SDK, allowing them to manage their inventory in a way that was familiar while benefitting from a Next.js app.",
+        description:
+            "Angelo Jewelry is a hand-made jewelry store located on the Downtown Mall in Charlotteville, Virginia.",
+    },
+    {
+        name: "James Cole",
+        type: "Portfolio Website",
+        url: "https://james-cole.netlify.app",
+        year: "2023",
+        technologies: ["Nuxt", "Vue"],
+        image: {
+            url: "/images/jamesScreenshot.netlify.app",
+            alt: "screenshot of james cole's portfolio website",
+        },
+        challenge:
+            "Poet and academic James Cole needed a website where he could list his publications and provide information on himself and his work. He also wanted a unique contact form, something that would represent his personality.",
+        solution:
+            "For James I designed something modern yet timeless, something that represented his unique poetry and would remain stylish for years to come. I also built a unique contact form that built messages based on mood.",
+        description:
+            "Personal portfolio website for poet and academic James Cole",
+    },
+    {
+        name: "Red Brick Inc",
+        type: "Business Website",
+        url: "https://redbrickinc.com",
+        year: "2023",
+        technologies: ["Next.js", "MUI", "Image editing"],
+        image: {
+            url: "/images/redbrickScreenshot.webp",
+            alt: "screenshot for red brick inc",
+        },
+        challenge:
+            "My business partner and I wanted a brand new website for our company, something that looked reliable and trustworthy and also contemporary and stylish.",
+        solution:
+            "I used image editing software to superimpose screenshots of my work onto stock images, which is meant to display professionalism and skill in a familiar way. ",
+        description:
+            "Business website for content management and web development",
+    },
+    {
         name: "Who Dat",
         type: "Browser-based Game",
         url: "https://whodat.ninja",
@@ -45,7 +96,7 @@ const portfolioProjects = [
         solution:
             "I used the ChatGPT API to generate conversation, and handled the game logic in a way that seamlessly integrates with the conversation.",
         description:
-            "Who Dat? is a browser-based game where you have a conversation with an unknown fictional character and must guess whom it is you're talking with.",
+            "Who Dat? is a browser-based game where you have a conversation with an unknown fictional character and must guess whom it is you're talking with",
     },
     {
         name: "The Rumen",
@@ -62,7 +113,7 @@ const portfolioProjects = [
         solution:
             "I built up custom submissions forms and a custom admin panel that created database entries on Firebase with corresponding URIs to their files in storage",
         description:
-            "The Rumen is a literary journal a few friends and I started. I had always wanted to be the editor of one, and now that I'm able to create websites, it's become a project of mine to run what I hope will become a very respected source of fiction, creative non-fiction, and poetry.",
+            "The Rumen is a literary journal a few friends and I started. I had always wanted to be the editor of one, and now that I'm able to create websites, it's become a project of mine to run what I hope will become a very respected source of fiction, creative non-fiction, and poetry",
     },
     {
         name: "Charlene Morris",
@@ -79,7 +130,7 @@ const portfolioProjects = [
         solution:
             "I created for Charlene a clean, sharp website with a look and feel similar to other insurance websites, but was uniquely hers. I included an iframe under the contact form to include her custom plugin.",
         description:
-            "Charlene is a local Insurance Agent who specializes in assisting elderly clients signing up for MediCare.",
+            "Charlene is a local Insurance Agent who specializes in assisting elderly clients signing up for MediCare",
     },
     // {
     //     name: "Zuzu's Hot Five",
@@ -113,7 +164,7 @@ const portfolioProjects = [
         solution:
             "I created for Cosima a stylish home gallery for some of her best pieces, and I adapted my existing photo gallery code to allow for easily customizeable categories and subcategories.",
         description:
-            "Cosima Hewes is an artist living near Shelburne Falls, MA, who specializes in pastoral, surreal, and female-centric painting.",
+            "Cosima Hewes is an artist living near Shelburne Falls, MA, who specializes in pastoral, surreal, and female-centric painting",
     },
     {
         name: "Fictional Web",
@@ -130,7 +181,7 @@ const portfolioProjects = [
         solution:
             "I settled on a design based on an artwork created by a friend of mine which I felt reflected the quality and subtle detail of my work. I created a tiered service plan and included links to live sites of the templates I've created. I also set up a form to send potential client information straight to my email's inbox.",
         description:
-            "Fictional Web is my personal freelancing website. I have created several templates that I can use to quickly create websites for artists, musicians, photographers, designers, academics, and anyone in the arts. I provide hybrid and custom services as well.",
+            "Fictional Web is my personal freelancing website. I have created several templates that I can use to quickly create websites for artists, musicians, photographers, designers, academics, and anyone in the arts. I provide hybrid and custom services as well",
     },
     {
         name: "2022 KDA PFDD",
@@ -147,7 +198,7 @@ const portfolioProjects = [
         solution:
             "For the KDA I created a website that included pdfs of important documents, a contact form with custom fields, and a photo gallery.",
         description:
-            "One of my earlier projects was a Patient-Focused Drug Development website for the Kennedy's Disease Association. They wanted a place for participants and attendees to reliablly find all the information that they were looking for regarding the event.",
+            "One of my earlier projects was a Patient-Focused Drug Development website for the Kennedy's Disease Association. They wanted a place for participants and attendees to reliablly find all the information that they were looking for regarding the event",
     },
 ];
 
