@@ -54,7 +54,7 @@ const portfolioProjects = [
         year: "2023",
         technologies: ["Nuxt", "Vue"],
         image: {
-            url: "/images/jamesScreenshot.netlify.app",
+            url: "/images/jamesScreenshot.webp",
             alt: "screenshot of james cole's portfolio website",
         },
         challenge:
